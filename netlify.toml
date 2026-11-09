@@ -1,3 +1,5 @@
 [build]
-  command = ""
+  # Static site with no build step. A no-op command overrides the
+  # "npm run build" command set in the Netlify UI (there is no package.json).
+  command = "echo 'No build step required'"
   publish = "."
