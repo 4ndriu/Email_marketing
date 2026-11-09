@@ -1,4 +1,8 @@
 
+/* =================================
+   CONFIGURACIÓN GENERAL
+================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,65 +10,333 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #eef1f7;
+    font-family: 'Georgia', serif;
+    background-color: #211B19;
+    min-height: 100vh;
+    color: #3B2923;
+}
+
+.pagina {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 40px 15px;
 }
 
-.contenedor {
-    background-color: white;
-    width: 90%;
-    max-width: 450px;
-    padding: 40px;
-    border-radius: 12px;
+/* =================================
+   TARJETA PRINCIPAL
+================================= */
+
+.tarjeta {
+    width: 100%;
+    max-width: 520px;
+    background-color: #F3EBDD;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+/* =================================
+   ENCABEZADO
+================================= */
+
+.encabezado {
+    background-color: #211B19;
+    color: #F3EBDD;
     text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    padding: 35px 20px 30px;
 }
 
-h1 {
-    color: #202B46;
+.logo {
+    width: 75px;
+    height: 75px;
+    border: 2px solid #B78A54;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 12px;
+
+    color: #D6AC77;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.subtitulo-logo {
+    color: #D6AC77;
+    font-size: 10px;
+    letter-spacing: 4px;
     margin-bottom: 15px;
 }
 
-.contenedor p {
-    color: #666;
-    margin-bottom: 25px;
+.encabezado h1 {
+    font-size: 28px;
+    letter-spacing: 3px;
+    font-weight: normal;
+}
+
+.encabezado h1 span {
+    display: block;
+    color: #D6AC77;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.linea-decorativa {
+    width: 80px;
+    height: 2px;
+    background-color: #B78A54;
+    margin: 20px auto;
+}
+
+.frase {
+    color: #D7C8B7;
+    font-style: italic;
+    font-size: 15px;
+}
+
+/* =================================
+   IMAGEN DECORATIVA
+================================= */
+
+.imagen-carne {
+    height: 220px;
+
+    background-image:
+        linear-gradient(
+            to top,
+            rgba(20,10,8,0.75),
+            rgba(20,10,8,0.05)
+        ),
+        url("https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=1200&q=85");
+
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.etiqueta-imagen {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+}
+
+.etiqueta-imagen span {
+    font-size: 25px;
+}
+
+.etiqueta-imagen p {
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-top: 8px;
+}
+
+/* =================================
+   CONTENIDO
+================================= */
+
+.contenido {
+    padding: 35px 35px 25px;
+    text-align: center;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: #8B3932;
+    border: 1px solid #B78A54;
+    padding: 7px 15px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.contenido h2 {
+    font-size: 27px;
+    color: #3B2923;
+    margin-bottom: 15px;
+}
+
+.descripcion {
+    color: #75645A;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+/* =================================
+   FORMULARIO
+================================= */
+
+form {
+    text-align: left;
 }
 
 label {
     display: block;
-    text-align: left;
-    margin-bottom: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
     font-weight: bold;
+    margin-bottom: 9px;
+    color: #49362D;
 }
 
 input {
     width: 100%;
-    padding: 13px;
-    border: 1px solid #ccc;
+    padding: 15px;
+    border: 1px solid #D5C8B7;
     border-radius: 6px;
-    margin-bottom: 20px;
+    background-color: #FFFFFF;
+    outline: none;
+    font-size: 14px;
+    margin-bottom: 16px;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #8B3932;
+    box-shadow: 0 0 0 3px rgba(139,57,50,0.1);
 }
 
 button {
     width: 100%;
-    padding: 14px;
-    background-color: #263f78;
-    color: white;
+    padding: 16px;
     border: none;
     border-radius: 6px;
+    background-color: #762E2C;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
     cursor: pointer;
-    font-size: 16px;
+    transition: 0.3s;
+}
+
+button span {
+    font-size: 19px;
+    margin-left: 8px;
 }
 
 button:hover {
-    background-color: #182b55;
+    background-color: #54201F;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
 }
 
 #mensaje {
-    margin-top: 20px;
-    font-size: 14px;
+    margin-top: 15px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+    color: #762E2C;
+}
+
+/* =================================
+   BENEFICIOS
+================================= */
+
+.beneficios {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #D8CABB;
+}
+
+.beneficios div {
+    text-align: center;
+}
+
+.beneficios span {
+    font-size: 25px;
+}
+
+.beneficios p {
+    color: #75645A;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    margin-top: 8px;
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+.footer {
+    background-color: #211B19;
+    color: #F3EBDD;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.footer-linea {
+    width: 55px;
+    height: 2px;
+    background-color: #B78A54;
+    margin: 0 auto 20px;
+}
+
+.footer h3 {
+    color: #D6AC77;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    color: #D7C8B7;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.footer small {
+    color: #95877B;
+    font-size: 10px;
+}
+
+/* =================================
+   ADAPTACIÓN A CELULARES
+================================= */
+
+@media (max-width: 480px) {
+
+    .pagina {
+        padding: 20px 12px;
+    }
+
+    .encabezado {
+        padding: 30px 15px;
+    }
+
+    .encabezado h1 {
+        font-size: 23px;
+    }
+
+    .encabezado h1 span {
+        font-size: 30px;
+    }
+
+    .imagen-carne {
+        height: 180px;
+    }
+
+    .contenido {
+        padding: 30px 22px 25px;
+    }
+
+    .contenido h2 {
+        font-size: 23px;
+    }
+
 }

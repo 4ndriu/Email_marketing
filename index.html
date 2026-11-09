@@ -4,35 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Suscripción</title>
+    <title>Carnicería Don Juan</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="contenedor">
-        <h1>¡Suscríbete!</h1>
-        <p>Ingresa tu correo y recibe nuestras novedades.</p>
+    <main class="pagina">
 
-        <form id="formulario">
-            <label for="email">Correo electrónico</label>
+        <section class="tarjeta">
 
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="ejemplo@correo.com"
-                required
-            >
+            <header class="encabezado">
+                <div class="logo">DJ</div>
+                <h1>CARNICERÍA DON JUAN</h1>
+                <p>TRADICIÓN Y SABOR</p>
+            </header>
 
-            <button type="submit">Suscribirme</button>
-        </form>
+            <div class="imagen-carne"></div>
 
-        <p id="mensaje"></p>
-    </div>
+            <section class="contenido">
+                <h2>¡Suscríbete!</h2>
 
-    <!-- Librería de EmailJS -->
+                <p>
+                    Recibe nuestras novedades y promociones.
+                </p>
+
+                <form id="formulario">
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Tu correo electrónico"
+                        required
+                    >
+
+                    <button type="submit" id="btnEnviar">
+                        SUSCRIBIRME
+                    </button>
+
+                    <p id="mensaje" aria-live="polite"></p>
+
+                </form>
+            </section>
+
+            <footer class="footer">
+                Gracias por preferirnos.
+                <br>
+                © 2026 Carnicería Don Juan.
+            </footer>
+
+        </section>
+
+    </main>
+
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@5/dist/email.min.js"></script>
-
     <script src="app.js"></script>
 
 </body>
